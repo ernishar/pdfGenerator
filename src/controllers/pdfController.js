@@ -27,7 +27,7 @@ const sendEmail = async (to, subject, text, attachment) => {
 
         await transporter.sendMail({
             from: process.env.EMAIL,
-            to: "nalam.netclues@gmail.com",
+            to: to,
             subject: "pdf Generated",
             text,
             attachments: [{ filename: 'report.pdf', content: attachment }],
